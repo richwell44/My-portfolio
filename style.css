@@ -27,7 +27,7 @@
     
 }
 
-@media (min-width: 400px) {
+@media (min-width: 200px) {
     :root {
         --fs-h1: 2.25rem;
         --fs-h2: 1.75rem;    
@@ -132,7 +132,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1001;
-    font-size: smaller;
+    font-size: x-small;
 }
 
 
@@ -255,10 +255,14 @@ header {
     position: relative;
 }
 
+.section__subtitle--services {
+    font-size: 95%;
+}
+
 .section__title--services::after {
     content: '';
     display: block;
-    width: 3em;
+    width: 4em;
     height: 1px;
     margin: 0.75em auto 1em;
     background: currentColor;
@@ -335,7 +339,7 @@ header {
 
 .my-work {
     background: var(--clr-dark);
-    color: var(--clr-light);
+    color: var(--clr-accent);
     text-align: center;
 }
 
@@ -381,12 +385,7 @@ header {
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
-    font-size: var(--fs-h3);
-}
-
-.footer a {
-    color: var(--clr-accent);
-    text-decoration: none;
+    font-size: var(--fs-body);
 }
 
 .footer__link {
