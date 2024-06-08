@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale=1.0"
+    />
+    <title>Quote of the day</title>
+    <link rel="stylesheet" href="./styling_random_quote.css" />
+  </head>
+  <body>
+    <div class="quote-box">
+      <h2>Quote of the day</h2>
+      <blockquote id="text">Loading...</blockquote>
+      <span id="author">Loading...</span>
+      <div>
+        <button onclick="getquote(api_url)" id="new-quote">
+          Get New Quote
+        </button>
+        <a id="tweet-quote" href="#" target="_blank">
+          <button>
+            <img
+              src="./img/random_quotes/Logo_of_Twitter.svg.png"
+              alt="Logo of Twitter"
+            />
+            Tweet
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const quote = document.getElementById("text");
+      const author = document.getElementById("author");
+
+      const api_url = "https://api.quotable.io/random";
+
+      async function getquote(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+        quote.innerHTML = data.content;
+        author.innerHTML = data.author;
+      }
+
+      getquote(api_url);
+
+      document
+        .getElementById("tweet-quote")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          tweet();
+        });
+
+      function tweet() {
+        window.open(
+          "https://twitter.com/intent/tweet?text=" +
+            quote.innerHTML +
+            "--- by " +
+            author.innerHTML
+        );
+      }
+    </script>
+  </body>
+</html>
