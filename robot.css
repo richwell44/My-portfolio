@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Dark gradient background */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #1a1a1d; /* Dark header background */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content h2 {
+  font-size: 2em;
+  border-bottom: 2px solid #00aaff; /* Robotic blue accent */
+  padding-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+footer {
+  background: #1a1a1d; /* Dark footer background */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+  color: #f0f0f0;
+}
+
+/* Additional robotic-themed styling */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("path-to-your-robotics-themed-background.jpg"); /* Add a robotics-themed background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Adjust opacity for a subtle effect */
+  z-index: -1;
+}
